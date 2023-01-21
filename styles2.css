@@ -1,0 +1,294 @@
+
+.picture{
+    border: 2px double black;
+    height: 200px;
+    width: 200px;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cera Round Pro';
+                                                
+}
+
+body{
+  background: red;
+  font-family: 'Cera Round Pro';
+                                                
+}
+
+.contenedor{
+  background: #434E5E;  
+  width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:"header header header"
+                        "contenido contenido sidebar"
+                        "WIDGET-1 WIDGET-2 sidebar"
+                        "footer footer footer";
+}
+
+.contenedor > header,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer  {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header{
+    background: #12203e;
+    color: white;
+    grid-area: header;
+   /** grid-column-start: 1;
+    grid-column-end: -1;/**/
+}
+
+.contenedor .contenido{
+    grid-area: contenido;
+    background: #434E5E;
+    color: antiquewhite;
+    /**grid-column: span 2;/**/
+}
+
+.contenedor .sidebar{
+    grid-column: 3 / 4;
+    background-color: #FAA43D;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+    /*grid-row: 2/; */
+}
+
+.contenedor .WIDGET-1,
+.contenedor .WIDGET-2  {
+background: #55a8fd;
+color:white;
+height: 100px;
+text-align: center;
+display: block;
+align-items: center;
+justify-content: center;
+}
+
+.contenedor .WIDGET-1{
+    grid-area: WIDGET-1;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.contenedor .WIDGET-2{
+    grid-area: WIDGET-2;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.contenedor .footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+    background: #12203e;
+    color: white;
+    
+   /* grid-column: span 3;*/
+}
+.contactme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.div ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+@media screen and (max-width: 768px){
+    .contenedor {
+        grid-template-areas:
+                            "header header header"
+                            "contenido contenido contenido"
+                            "sidebar sidebar sidebar"
+                            "WIDGET-1 WIDGET-1 WIDGET-2"
+                            "footer footer footer";
+    }
+}
+
+.contactme{
+    text-decoration: none;
+    color:#12203e;
+}
+.text-link{
+    text-decoration: none;
+    color:#FAA43D;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+  .resume-social {
+    font-size: 0.875rem;
+  }
+  
+  .resume-social .fa-container {
+    font-size: 1rem;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 0.125rem;
+    background: white;
+    color: #434E5E;
+  }
+
+  .theme-bg-primary {
+    background-color: #434E5E;
+  }
+  
+  .theme-bg-primary-darken {
+    background-color: #191d22;
+  }
+  
+  a.theme-btn-on-bg, .theme-btn-on-bg {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border: none;
+  }
+  
+  a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .theme-btn-on-bg:hover, .theme-btn-on-bg:focus, .theme-btn-on-bg:active {
+    background: #000000;
+    border-color: transparent;
+    border: none;
+  }
+  
+  .progress {
+    border-radius: 2px;
+  }
+  
+  .theme-progress-bar-dark {
+    background-color: #434E5E;
+  }
+  
+  .resume-section-title {
+    font-size: 1.25rem;
+    position: relative;
+    color: #434E5E;
+  }
+  
+  .resume-section-title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background: #8d9aad;
+  }
+  
+  .resume-section-content {
+    color: #58677c;
+  }
+  
+  .resume-section-title {
+    font-size: 1.25rem;
+    position: relative;
+    color: #434E5E;
+  }
+  
+  .resume-section-title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background: #8d9aad;
+  }
+  
+  .resume-section-content {
+    color: #58677c;
+  }
+  /**********************************************************/
+  progress {
+    vertical-align: baseline;
+  }
+  @keyframes progress-bar-stripes {
+    0% {
+      background-position-x: 1rem;
+    }
+  }
+  
+  .progress {
+    --bs-progress-height: 1rem;
+    --bs-progress-font-size: 0.75rem;
+    --bs-progress-bg: #e9ecef;
+    --bs-progress-border-radius: 0.375rem;
+    --bs-progress-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    --bs-progress-bar-color: #fff;
+    --bs-progress-bar-bg: #0d6efd;
+    --bs-progress-bar-transition: width 0.6s ease;
+    display: flex;
+    height: var(--bs-progress-height);
+    overflow: hidden;
+    font-size: var(--bs-progress-font-size);
+    background-color: var(--bs-progress-bg);
+    border-radius: var(--bs-progress-border-radius);
+  }
+  
+  .progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--bs-progress-bar-color);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--bs-progress-bar-bg);
+    transition: var(--bs-progress-bar-transition);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .progress-bar {
+      transition: none;
+    }
+  }
+  
+  .progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: var(--bs-progress-height) var(--bs-progress-height);
+  }
+  
+  .progress-bar-animated {
+    animation: 1s linear infinite progress-bar-stripes;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .progress-bar-animated {
+      animation: none;
+    }
+  }
+
+
+  form{
+
+    display:none;
+  }
+.button{
+  border:2px solid #BB2D3B;
+  border-radius: 10px; 
+  background: #FFCA2C;
+  color:#BB2D3B;
+  margin: 20px;
+}
